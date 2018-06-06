@@ -23,7 +23,7 @@ var algorithms = map[string]hash.Hash{
 	"md5":    md5.New(),
 	"sha224": sha256.New224(),
 	"sha256": sha256.New(),
-	"sha384": sha384.New384(),
+	"sha384": sha512.New384(),
 	"sha512": sha512.New(),
 	"sha3":   sha3.New512(),
 }

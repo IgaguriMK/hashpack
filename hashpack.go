@@ -18,14 +18,28 @@ import (
 )
 
 var algorithms = map[string]hash.Hash{
-	"crc32":  crc32.NewIEEE(),
-	"crc64":  crc64.New(crc64.MakeTable(crc64.ISO)),
-	"md5":    md5.New(),
-	"sha224": sha256.New224(),
-	"sha256": sha256.New(),
-	"sha384": sha512.New384(),
-	"sha512": sha512.New(),
-	"sha3":   sha3.New512(),
+	"crc32":            crc32.NewIEEE(),
+	"crc32_ieee":       crc32.NewIEEE(),
+	"crc32_castagnoli": crc32.New(crc32.MakeTable(crc32.Castagnoli)),
+	"crc32_koopman":    crc32.New(crc32.MakeTable(crc32.Koopman)),
+	"crc64":            crc64.New(crc64.MakeTable(crc64.ISO)),
+	"crc64_iso":        crc64.New(crc64.MakeTable(crc64.ISO)),
+	"crc64_ecma":       crc64.New(crc64.MakeTable(crc64.ECMA)),
+	"md5":              md5.New(),
+	"sha2":             sha256.New(),
+	"sha224":           sha256.New224(),
+	"sha224":           sha256.New224(),
+	"sha256":           sha256.New(),
+	"sha384":           sha512.New384(),
+	"sha512":           sha512.New(),
+	"sha512_224":       sha512.New512_224(),
+	"sha512_256":       sha512.New512_256(),
+	"sha3":             sha3.New512(),
+	"sha3_224":         sha3.New224(),
+	"sha3_256":         sha3.New256(),
+	"sha3_384":         sha3.New384(),
+	"sha3_224":         sha3.New224(),
+	"sha3_512":         sha3.New512(),
 }
 
 func main() {
